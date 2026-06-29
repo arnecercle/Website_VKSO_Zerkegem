@@ -109,7 +109,7 @@ export default function Navigation() {
         >
           <Link href="/">
             <img
-              src="https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia/logo%20zerkegem.png?withoutEnlargement&resize=30,29"
+              src="/images/logo%20zerkegem___serialized2.png"
               alt="V.K.S.O. Zerkegem"
               className="h-[29px] w-auto"
             />
@@ -165,7 +165,7 @@ export default function Navigation() {
         <div className="mx-auto flex max-w-[1430px] items-center px-4" style={{ minHeight: "98px" }}>
           <Link href="/" className="mr-8 shrink-0">
             <img
-              src="https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia/logo%20zerkegem.png?etag=%2279c0a-5d703bb6%22&sourceContentType=image%2Fpng&ignoreAspectRatio&resize=123%2B120"
+              src="/images/logo%20zerkegem___serialized2.png"
               alt="V.K.S.O. Zerkegem"
               className="h-[60px] w-auto"
             />

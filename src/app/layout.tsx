@@ -3,9 +3,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const OG_IMAGE = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia/logo%20zerkegem.png";
+const OG_IMAGE = "/images/logo%20zerkegem.png";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vksozerkegem.be"),
   title: {
     default: "V.K.S.O. Zerkegem",
     template: "%s | V.K.S.O. Zerkegem",
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Play:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia/logo%20zerkegem.png?etag=%2279c0a-5d703bb6%22&sourceContentType=image%2Fpng&resize=32,32&ignoreAspectRatio" />
+        <link rel="icon" href="/images/logo%20zerkegem.png" />
       </head>
       <body className="min-h-screen bg-white">
         <Navigation />

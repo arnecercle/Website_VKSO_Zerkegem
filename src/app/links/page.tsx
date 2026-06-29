@@ -4,7 +4,7 @@ import { linkPages } from "@/data/links";
 
 export const metadata: Metadata = { title: "Links" };
 
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
+const CDN = "/images";
 
 export default function LinksPage() {
   return (
