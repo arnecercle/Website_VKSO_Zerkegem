@@ -1,12 +1,11 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useCallback } from "react";
-
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
+import { useState, useEffect, useCallback } from 'react';
+import { CDN } from '@/lib/constants';
 
 type TeamPhoto = { src: string; alt: string };
 
-export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[] }) {
+export default function geClient({ teamPhotos }: { teamPhotos: TeamPhoto[] }) {
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => {
@@ -25,20 +24,20 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
   return (
     <>
       {/* Hero / Carousel Section */}
-      <section style={{ backgroundColor: "rgba(4,4,4,1)" }}>
+      <section style={{ backgroundColor: 'rgba(4,4,4,1)' }}>
         <div className="relative mx-auto max-w-[1430px]">
           <div className="relative overflow-hidden">
             {teamPhotos.map((photo, i) => (
               <div
                 key={i}
                 className={`transition-opacity duration-700 ${
-                  i === current ? "opacity-100" : "opacity-0 absolute inset-0"
+                  i === current ? 'opacity-100' : 'opacity-0 absolute inset-0'
                 }`}
               >
                 <img
                   src={photo.src}
                   alt={photo.alt}
-                  className="h-[500px] w-full object-cover sm:h-[600px]"
+                  className="h-[500px] w-full object-contain sm:h-[600px]"
                 />
               </div>
             ))}
@@ -59,8 +58,18 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
             className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white hover:bg-black/70"
             aria-label="Vorige foto"
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <button
@@ -68,8 +77,18 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
             className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white hover:bg-black/70"
             aria-label="Volgende foto"
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
 
@@ -79,7 +98,7 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`h-2 w-2 rounded-full transition-colors ${
-                  i === current ? "bg-white" : "bg-white/50"
+                  i === current ? 'bg-white' : 'bg-white/50'
                 }`}
                 aria-label={`Ga naar foto ${i + 1}`}
               />
@@ -89,7 +108,7 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
       </section>
 
       {/* Info Bar */}
-      <section style={{ backgroundColor: "rgba(4,4,4,1)" }}>
+      <section style={{ backgroundColor: 'rgba(4,4,4,1)' }}>
         <div className="mx-auto flex max-w-[1430px] items-center justify-center gap-2 px-4 py-3">
           <svg
             className="h-5 w-5 text-white"
@@ -121,16 +140,18 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
               <strong>Beste ouder, beste speler,</strong>
             </p>
             <p>
-              Ben jij op zoek naar een nieuwe hobby en zou je graag voetballen, dan nodigt V.K.S.O.
-              Zerkegem je graag uit om vrijblijvend enkele voetbaltrainingen mee te volgen.
+              Ben jij op zoek naar een nieuwe hobby en zou je graag voetballen,
+              dan nodigt V.K.S.O. Zerkegem je graag uit om vrijblijvend enkele
+              voetbaltrainingen mee te volgen.
             </p>
             <p>
-              Niet twijfelen en kom zelf eens kijken of uitproberen. Je kan na enkele trainingen zelf
-              beslissen of je wenst aan te sluiten.
+              Niet twijfelen en kom zelf eens kijken of uitproberen. Je kan na
+              enkele trainingen zelf beslissen of je wenst aan te sluiten.
             </p>
             <p>
-              V.K.S.O. Zerkegem is een gezellige en familiale club, waar het kind centraal staat. In
-              onze vereniging zijn zowel jongens als meisjes heel er welkom.
+              V.K.S.O. Zerkegem is een gezellige en familiale club, waar het
+              kind centraal staat. In onze vereniging zijn zowel jongens als
+              meisjes heel er welkom.
             </p>
             <p>Wij staan voor jou klaar met een groep enthousiaste trainers.</p>
           </div>
@@ -143,7 +164,10 @@ export default function HomePageClient({ teamPhotos }: { teamPhotos: TeamPhoto[]
               <strong>Jeugdvoorzitter Jurrie Debruyne</strong>
             </p>
             <p className="mt-2">
-              <a href="tel:+32478640063" className="text-blue-600 hover:underline">
+              <a
+                href="tel:+32478640063"
+                className="text-blue-600 hover:underline"
+              >
                 Telnr. +32 478 64 00 63
               </a>
             </p>

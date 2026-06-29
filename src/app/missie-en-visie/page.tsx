@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import { CDN } from "@/lib/constants";
 
 export const metadata: Metadata = { title: "Over ons" };
-
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
 
 export default function MissieEnVisiePage() {
   return (

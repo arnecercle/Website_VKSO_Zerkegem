@@ -1,8 +1,8 @@
+import { CDN } from '@/lib/constants';
+
 export type StaffMember = {
   name: string;
   role: string;
-  email: string;
-  phone: string;
   image?: string;
 };
 
@@ -17,36 +17,27 @@ export type Team = {
   children?: { slug: string; name: string }[];
 };
 
-const CDN =
-  'https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia';
-
 export const teams: Team[] = [
   {
-    slug: 'akern',
-    name: 'A-kern',
+    slug: 'A-Kern',
+    name: 'A-Kern',
     category: 'senior',
     image: `${CDN}/A-Ploeg%20FINALJPG___serialized1.jpg`,
-    voetbalvlaanderenSlug: 'a-kern',
+    voetbalvlaanderenSlug: 'club/2669/ploeg/333863',
     staff: [
       {
         name: 'Lorenzo Frickelo',
         role: 'T1',
-        email: 'frickelolorenzo@hotmail.com',
-        phone: '+32 499 99 89 73',
         image: `${CDN}/Lorenzo%20Frickelo___serialized2.jpg`,
       },
       {
         name: 'Timothy Scheyving',
         role: 'T2',
-        email: 'timothyscheyving@gmail.com',
-        phone: '+32 477 08 00 21',
         image: `${CDN}/Timothy%20Scheyving___serialized2.jpg`,
       },
       {
         name: 'Jurrie Debruyne',
         role: 'Keepers',
-        email: 'jurrie.debruyne@telenet.be',
-        phone: '+32 478 64 00 63',
         image: `${CDN}/IMG-20231005-WA0000___serialized1.jpg`,
       },
     ],
@@ -58,26 +49,14 @@ export const teams: Team[] = [
     image: `${CDN}/B-Ploeg%20FINAL%20JPG___serialized1.jpg`,
     staff: [
       {
-        name: 'Chris Coppin',
+        name: 'Peter Van der Heyden',
         role: 'T1',
-        email: '',
-        phone: '',
-        image: `${CDN}/Chris%20Coppin___serialized1.jpg`,
+        image: `${CDN}/Peter%20Van%20der%20Heyden___serialized1.jpg`,
       },
-    ],
-  },
-  {
-    slug: 'beloften-1',
-    name: 'Beloften',
-    category: 'senior',
-    image: `${CDN}/Beloften%20FINAL%20JPG___serialized1.jpg`,
-    staff: [
       {
-        name: 'Nils Allemeersch',
-        role: 'T1',
-        email: '',
-        phone: '',
-        image: `${CDN}/Nils%20Allemeersch___serialized1.jpg`,
+        name: 'Jurrie Debruyne',
+        role: 'Keepers',
+        image: `${CDN}/IMG-20231005-WA0000___serialized1.jpg`,
       },
     ],
   },
@@ -120,8 +99,6 @@ export const youthTeams: Team[] = [
       {
         name: 'Arne vandenberghe',
         role: 'Coach',
-        email: 'arne.vandenberghe06@gmail.com',
-        phone: '+32 493 06 45 26',
         image: `${CDN}/IMG-20230920-WA0003___serialized1.jpg`,
       },
     ],
@@ -132,7 +109,7 @@ export const youthTeams: Team[] = [
     name: 'U7',
     category: 'youth',
     image: `${CDN}/U7___serialized1.jpg`,
-    staff: [{ name: '', role: 'Coach', email: '', phone: '' }],
+    staff: [],
     trainingSchedule: '',
   },
   {
@@ -216,6 +193,11 @@ export const youthTeams: Team[] = [
   },
 ];
 
+const slugAliases: Record<string, string> = {
+  'a-kern-dames': 'dameselftal',
+};
+
 export function getTeamBySlug(slug: string): Team | undefined {
-  return [...teams, ...youthTeams].find((t) => t.slug === slug);
+  const resolved = slugAliases[slug] ?? slug;
+  return [...teams, ...youthTeams].find((t) => t.slug === resolved);
 }

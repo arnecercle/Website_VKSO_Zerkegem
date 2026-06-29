@@ -3,6 +3,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+const OG_IMAGE = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia/logo%20zerkegem.png";
+
 export const metadata: Metadata = {
   title: {
     default: "V.K.S.O. Zerkegem",
@@ -13,6 +15,14 @@ export const metadata: Metadata = {
     title: "V.K.S.O. Zerkegem",
     siteName: "V.K.S.O. Zerkegem",
     url: "https://vksozerkegem.be/",
+    description: "Welkom bij V.K.S.O. Zerkegem - Stamnr 8280",
+    images: [{ url: OG_IMAGE, width: 512, height: 512 }],
+  },
+  twitter: {
+    card: "summary",
+    title: "V.K.S.O. Zerkegem",
+    description: "Welkom bij V.K.S.O. Zerkegem - Stamnr 8280",
+    images: [OG_IMAGE],
   },
 };
 

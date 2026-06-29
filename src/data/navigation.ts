@@ -10,9 +10,8 @@ export const navigation: NavItem[] = [
     label: 'Teams',
     href: '/ploegen/',
     children: [
-      { label: 'A-kern', href: '/ploegen/akern' },
+      { label: 'A-Kern', href: '/ploegen/A-Kern' },
       { label: 'B-Kern', href: '/ploegen/B-Kern' },
-      { label: 'Beloften', href: '/ploegen/beloften-1' },
       { label: 'Dames', href: '/ploegen/dameselftal' },
       {
         label: 'Jeugd',

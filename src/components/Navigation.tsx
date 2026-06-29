@@ -98,15 +98,14 @@ function NavLink({
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <>
       {/* Mobile header */}
       <div className="sm:hidden">
         <header
-          className="flex items-center justify-between px-4 py-2"
-          style={{ backgroundColor: "rgba(4,4,4,1)" }}
+          className="flex items-center justify-between px-4"
+          style={{ backgroundColor: "rgba(4,4,4,1)", minHeight: "56px" }}
         >
           <Link href="/">
             <img
@@ -115,25 +114,16 @@ export default function Navigation() {
               className="h-[29px] w-auto"
             />
           </Link>
-          <span
-            className="text-white font-archivo text-base"
-            style={{ fontFamily: "Archivo Narrow" }}
-          >
-            {pathname === "/" ? "Home" : ""}
-          </span>
-          <div className="w-[30px]" />
-        </header>
-        <div className="bg-black/90 px-4">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex flex-col gap-1 py-4"
+            className="flex flex-col gap-1"
             aria-label="Menu wisselen"
           >
             <span className="block h-[2px] w-5 bg-white" />
             <span className="block h-[2px] w-5 bg-white" />
             <span className="block h-[2px] w-5 bg-white" />
           </button>
-        </div>
+        </header>
         {mobileOpen && (
           <>
             <div
@@ -141,7 +131,7 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             />
             <nav
-              className="fixed left-0 top-0 z-50 h-full w-72 overflow-y-auto"
+              className="fixed right-0 top-0 z-50 h-full w-72 overflow-y-auto"
               style={{ backgroundColor: "rgba(4,4,4,1)" }}
             >
               <div className="flex justify-end p-4">

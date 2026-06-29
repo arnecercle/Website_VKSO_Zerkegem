@@ -1,4 +1,4 @@
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
+import { CDN } from "@/lib/constants";
 
 const teamPhotos = [
   { src: `${CDN}/A-Ploeg%20FINALJPG___serialized1.jpg`, alt: "A-Ploeg" },

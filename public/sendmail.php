@@ -317,9 +317,9 @@ function validateRequestMethod($requestMethod) {
  * @return boolean
  */
 function isValidRequester() {
-    $apacheHeaders = apache_request_headers();
+    $apacheHeaders = function_exists('apache_request_headers') ? apache_request_headers() : [];
 
-    $appId  = $apacheHeaders['X-Appid'] ?: "";
+    $appId  = isset($apacheHeaders['X-Appid']) ? $apacheHeaders['X-Appid'] : "";
     $appIds = json_decode('["oneConnectFormmail"]');
 
     return (

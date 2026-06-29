@@ -1,10 +1,10 @@
+import { CDN } from "@/lib/constants";
+
 export type MissiePage = {
   slug: string;
   title: string;
   content: React.ReactNode;
 };
-
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
 
 export const missiePages: Record<string, { title: string; content: React.ReactNode }> = {
   bestuur: {

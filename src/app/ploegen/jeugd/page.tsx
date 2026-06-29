@@ -15,7 +15,7 @@ export default function JeugdPage() {
           {youthTeams.map((team) => (
             <Link
               key={team.slug}
-              href={`/ploegen/${team.slug}`}
+              href={`/ploegen/jeugd/${team.slug}`}
               className="group overflow-hidden rounded-lg bg-white/10 transition-transform hover:scale-[1.02]"
             >
               {team.image && (

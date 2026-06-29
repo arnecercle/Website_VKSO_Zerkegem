@@ -30,7 +30,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="font-archivo text-sm text-white/80">
-          Copyright V.K.S.O. Zerkegem webdesign 2024&copy; Alle rechten voorbehouden
+          Copyright V.K.S.O. Zerkegem &copy; {new Date().getFullYear()} Alle rechten voorbehouden
         </p>
       </div>
     </footer>

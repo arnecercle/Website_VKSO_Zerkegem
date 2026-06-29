@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
+import { CDN } from "@/lib/constants";
 
 export const metadata: Metadata = { title: "Sponsors" };
 
-const CDN = "https://impro.usercontent.one/appid/oneComWsb/domain/vksozerkegem.be/media/vksozerkegem.be/onewebmedia";
-
 const sponsorCategories = [
   {
-    title: "Hoofdsponsor V.K.S.0 Zerkegem",
+    title: "Hoofdsponsor V.K.S.O Zerkegem",
     logos: [
       `${CDN}/Sponsors/Crelan%20Zerkegem.png`,
       `${CDN}/Sponsors/Maene.png`,
@@ -14,7 +13,7 @@ const sponsorCategories = [
     ],
   },
   {
-    title: "Partnersponsors V.K.S.0 Zerkegem",
+    title: "Partnersponsors V.K.S.O Zerkegem",
     logos: [
       `${CDN}/Sponsors/Caros%20Home.png`,
       `${CDN}/Sponsors/Deschacht.png`,
@@ -25,7 +24,7 @@ const sponsorCategories = [
     ],
   },
   {
-    title: "Partnersponsors Jeugd V.K.S.0 Zerkegem",
+    title: "Partnersponsors Jeugd V.K.S.O Zerkegem",
     logos: [
       `${CDN}/Sponsors/EV%20Consult.png`,
       `${CDN}/Sponsors/Crea%20Garden%20Design.png`,
@@ -40,7 +39,7 @@ const sponsorCategories = [
     ],
   },
   {
-    title: "Steunsponsors V.K.S.0 Zerkegem",
+    title: "Steunsponsors V.K.S.O Zerkegem",
     logos: [
       `${CDN}/Sponsors/Build4ever.png`,
       `${CDN}/Sponsors/De%20Linde%20Les%20Tzars.png`,
@@ -101,3 +100,4 @@ export default function SponsorsPage() {
     </>
   );
 }
+
